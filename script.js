@@ -1,3 +1,70 @@
+const temas = {
+    dark: {
+        "--bg": "#0A0A0A",
+        "--card": "#141414",
+        "--card-hover": "#1F1F1F",
+        "--input": "#0A0A0A",
+        "--primary": "#333333",
+        "--primary-dark": "#1A1A1A",
+        "--secondary": "#4D4D4D",
+        "--success": "#2A2A2A",
+        "--text": "#FFFFFF",
+        "--text-muted": "#888888",
+        "--border": "#2A2A2A"
+    },
+    red: {
+        "--bg": "#1D1616",
+        "--card": "#2A1F1F",
+        "--card-hover": "#3D2828",
+        "--input": "#1D1616",
+        "--primary": "#D84040",
+        "--primary-dark": "#8E1616",
+        "--secondary": "#FF6B6B",
+        "--success": "#40D840",
+        "--text": "#EEEEEE",
+        "--text-muted": "#AAAAAA",
+        "--border": "#8E1616"
+    },
+    gold: {
+        "--bg": "#1D1616",
+        "--card": "#2A2520",
+        "--card-hover": "#3D3528",
+        "--input": "#1D1616",
+        "--primary": "#FFD700",
+        "--primary-dark": "#B8860B",
+        "--secondary": "#FFA500",
+        "--success": "#32CD32",
+        "--text": "#EEEEEE",
+        "--text-muted": "#AAAAAA",
+        "--border": "#8B7355"
+    }
+};
+
+function setTheme(nomeTema) {
+    const tema = temas[nomeTema];
+    if (!tema) return;
+    
+    // Aplicar cores
+    for (let [variavel, cor] of Object.entries(tema)) {
+        document.documentElement.style.setProperty(variavel, cor);
+    }
+    
+    // Atualizar botão ativo
+    document.querySelectorAll('.theme-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.theme === nomeTema) btn.classList.add('active');
+    });
+    
+    // Salvar preferência
+    localStorage.setItem('tema', nomeTema);
+}
+
+// Carregar tema salvo ao iniciar
+document.addEventListener('DOMContentLoaded', function() {
+    const temaSalvo = localStorage.getItem('tema') || 'dark';
+    setTheme(temaSalvo);
+});
+
 // Estado global
 let currentMode = "encrypt";
 let cipherList = [];
