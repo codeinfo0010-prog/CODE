@@ -1,46 +1,44 @@
 const temas = {
     dark: {
-    --bg: #0A0A0A;
-    --card: #141414;
-    --card-hover: #1F1F1F;
-    --input: #0A0A0A;
-    --primary: #333333;
-    --primary-dark: #1A1A1A;
-    --secondary: #4D4D4D;
-    --success: #2A2A2A;
-    --text: #FFFFFF;
-    --text-muted: #888888;
-    --border: #2A2A2A;
-},
+        "--bg": "#0A0A0A",
+        "--card": "#141414",
+        "--card-hover": "#1F1F1F",
+        "--input": "#0A0A0A",
+        "--primary": "#333333",
+        "--primary-dark": "#1A1A1A",
+        "--secondary": "#4D4D4D",
+        "--success": "#2A2A2A",
+        "--text": "#FFFFFF",
+        "--text-muted": "#888888",
+        "--border": "#2A2A2A"
+    },
     red: {
-    --bg: #000000;
-    --card: #2b2b2b;
-    --card-hover: #3D2828;
-    --input: #1D1616;
-    --primary: #D84040;
-    --primary-dark: #8E1616;
-    --secondary: #FF6B6B;
-    --success: #626262;
-    --text: #EEEEEE;
-    --text-muted: #AAAAAA;
-    --border: #d70000;
-},
+        "--bg": "#000000",
+        "--card": "#2b2b2b",
+        "--card-hover": "#3D2828",
+        "--input": "#1D1616",
+        "--primary": "#D84040",
+        "--primary-dark": "#8E1616",
+        "--secondary": "#FF6B6B",
+        "--success": "#626262",
+        "--text": "#EEEEEE",
+        "--text-muted": "#AAAAAA",
+        "--border": "#d70000"
+    },
     gold: {
-        {
-    --bg: #1D1616;
-    --card: #2A2520;
-    --card-hover: #3D3528;
-    --input: #1D1616;
-    --primary: #FFD700;
-    --primary-dark: #B8860B;
-    --secondary: #FFA500;
-    --success: #525252;
-    --text: #EEEEEE;
-    --text-muted: #AAAAAA;
-    --border: #8B7355;
-}
+        "--bg": "#1D1616",
+        "--card": "#2A2520",
+        "--card-hover": "#3D3528",
+        "--input": "#1D1616",
+        "--primary": "#FFD700",
+        "--primary-dark": "#B8860B",
+        "--secondary": "#FFA500",
+        "--success": "#525252",
+        "--text": "#EEEEEE",
+        "--text-muted": "#AAAAAA",
+        "--border": "#8B7355"
+    }
 };
-
 function setTheme(nomeTema) {
     const tema = temas[nomeTema];
     if (!tema) return;
