@@ -3,9 +3,17 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-    --primary: #6366f1; --primary-dark: #4f46e5; --secondary: #ec4899;
-    --success: #10b981; --bg: #0f172a; --card: #1e293b; --card-hover: #263449;
-    --text: #f8fafc; --text-muted: #94a3b8; --border: #334155; --input: #0f172a;
+    --bg: #0A0A0A;
+    --card: #141414;
+    --card-hover: #1F1F1F;
+    --input: #0A0A0A;
+    --primary: #333333;
+    --primary-dark: #1A1A1A;
+    --secondary: #4D4D4D;
+    --success: #2A2A2A;
+    --text: #FFFFFF;
+    --text-muted: #888888;
+    --border: #2A2A2A;
 }
 
 body {
@@ -196,4 +204,35 @@ textarea:focus, input[type="text"]:focus {
     h1 { font-size: 1.8rem; }
     .cipher-config { flex-direction: column; }
     .cipher-config input, .cipher-config select { width: 100%; }
+}
+
+.theme-selector {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: var(--card);
+    border-radius: 10px;
+}
+
+.theme-btn {
+    padding: 8px 16px;
+    border: 1px solid var(--border);
+    background: var(--input);
+    color: var(--text-muted);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.theme-btn:hover {
+    border-color: var(--primary);
+    color: var(--text);
+}
+
+.theme-btn.active {
+    background: var(--primary);
+    color: var(--bg);
+    border-color: var(--primary);
 }
