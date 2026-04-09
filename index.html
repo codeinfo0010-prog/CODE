@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>|π|</title>
+    <title>Criptografia Avancada Multi-Camadas</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <header>
-            <h1>Criptografia Avancada</h1>
-            <p class="subtitle">Combine multiplas cifras classicas</p>
+            <h1>Criptografia</h1>
+            <p class="subtitle">cifras classicas</p>
         </header>
+
+        <div class="theme-selector">
+            <button class="theme-btn active" onclick="setTheme('dark')" data-theme="dark">Preto</button>
+            <button class="theme-btn" onclick="setTheme('red')" data-theme="red">Vermelho</button>
+            <button class="theme-btn" onclick="setTheme('gold')" data-theme="gold">Amarelo</button>
+        </div>
 
         <div class="card">
             <div class="section-title">Configurar Cifras (ordem de aplicacao)</div>
-            
+
             <div class="cipher-list" id="cipherList"></div>
 
             <div class="cipher-selector">
@@ -39,7 +47,7 @@
 
         <div class="card">
             <div class="section-title">Texto</div>
-            
+
             <div class="mode-toggle">
                 <div class="mode-slider" id="modeSlider"></div>
                 <button class="mode-btn active" onclick="setMode('encrypt')">Criptografar</button>
@@ -56,7 +64,7 @@
 
         <div class="card result-card" id="resultCard" style="display: none;">
             <div class="section-title">Resultado</div>
-            
+
             <div class="result-box">
                 <div class="result-header">
                     <span>Texto final</span>
@@ -75,4 +83,5 @@
     <script src="ciphers.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
